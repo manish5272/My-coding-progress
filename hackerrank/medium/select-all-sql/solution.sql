@@ -1,2 +1,2 @@
-SELECT *
-FROM CITY;
+select * 
+from city;
