@@ -1,4 +1,4 @@
-# Employee Names
+# Employee Salaries
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -25,12 +25,13 @@ where _employee\_id_ is an employee's ID number, _name_ is their name, _months_ 
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-17T17:05:37.712Z  
+**Submitted:** 2026-09-17T17:05:53.622Z  
 
 ```sql
 select name
 from Employee
-order by name asc;
+where salary > 2000 and months < 10 
+order by employee_id asc;
 
 ```
 
