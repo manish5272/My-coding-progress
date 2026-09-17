@@ -24,12 +24,12 @@ The **CITY** table is described as follows:
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-24T23:16:42.446Z  
+**Submitted:** 2026-09-17T16:46:29.087Z  
 
 ```sql
-SELECT *
-FROM CITY
-WHERE ID=1661;
+select *
+from CITY
+where id=1661;
 
 ```
 
