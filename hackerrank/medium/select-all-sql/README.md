@@ -24,11 +24,11 @@ The **CITY** table is described as follows:
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-24T23:14:45.564Z  
+**Submitted:** 2026-09-17T16:43:49.693Z  
 
 ```sql
-SELECT *
-FROM CITY;
+select * 
+from city;
 
 ```
 
