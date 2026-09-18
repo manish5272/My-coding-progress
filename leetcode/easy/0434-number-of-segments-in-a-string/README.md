@@ -38,32 +38,31 @@ Output: 1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-18T20:39:56.262Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.3 MB (beats 92.76%)  
+**Submitted:** 2026-09-18T20:51:18.813Z  
 
 ```java
 class Solution {
     public int countSegments(String s) {
-
-        String sorted = s.trim();
+        String s1 = s.trim();
         int count=1;
+        if(s1.length()==0){
+            count=0;
+            
+        }
+        else{
+            for(int i=0;i<s1.length();i++){
+            
+                
+                 if(s1.charAt(i) == ' ' && s1.charAt(i+1) != ' '){
+                    count++;
+                }
 
-        for(int i =0 ;i<s.length()-1;i++){
-            
-            if(sorted.length()==0){
-                count=0;
-                break;
             }
-            
-            else if(sorted.charAt(i) == ' '){
-                count++; 
-            }
-            
         }
 
         return count;
-        
     }
 }
 ```
