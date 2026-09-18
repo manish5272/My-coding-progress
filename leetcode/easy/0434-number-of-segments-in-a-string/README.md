@@ -39,8 +39,8 @@ Output: 1
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 43 MB  
-**Submitted:** 2026-09-18T20:38:19.235Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-09-18T20:39:56.262Z  
 
 ```java
 class Solution {
@@ -51,12 +51,12 @@ class Solution {
 
         for(int i =0 ;i<s.length()-1;i++){
             
-            if((s.length()-1)==0){
+            if(sorted.length()==0){
                 count=0;
                 break;
             }
             
-            else if(s.charAt(i) == ' '){
+            else if(sorted.charAt(i) == ' '){
                 count++; 
             }
             
