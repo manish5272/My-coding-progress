@@ -1,23 +1,22 @@
 class Solution {
     public int countSegments(String s) {
-
-        String sorted = s.trim();
+        String s1 = s.trim();
         int count=1;
+        if(s1.length()==0){
+            count=0;
+            
+        }
+        else{
+            for(int i=0;i<s1.length();i++){
+            
+                
+                 if(s1.charAt(i) == ' ' && s1.charAt(i+1) != ' '){
+                    count++;
+                }
 
-        for(int i =0 ;i<s.length()-1;i++){
-            
-            if(sorted.length()==0){
-                count=0;
-                break;
             }
-            
-            else if(sorted.charAt(i) == ' '){
-                count++; 
-            }
-            
         }
 
         return count;
-        
     }
 }
