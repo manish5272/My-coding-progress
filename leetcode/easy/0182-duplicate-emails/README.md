@@ -53,9 +53,9 @@ Explanation: a@b.com is repeated two times.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 85 ms  
-**Memory:** 0B  
-**Submitted:** 2026-09-20T19:23:48.677Z  
+**Runtime:** 535 ms (beats 13.43%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-09-20T19:23:54.050Z  
 
 ```sql
 select p.email as Email
