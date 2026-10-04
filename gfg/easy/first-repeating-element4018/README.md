@@ -1,0 +1,61 @@
+# First Repeating Element
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
+
+## Problem
+
+Given an array  **arr[],**  find the first repeating element position. The element should occur more than once and the position (from left) of its first occurrence should be the smallest.
+
+ **Note:** The position you return should be according to 1-based indexing. 
+
+ **Examples:** 
+
+```
+Input: arr[] = [1, 5, 3, 4, 3, 5, 6]
+Output: 2
+Explanation: 5 appears twice and its first appearance is at position 2 which is less than 3 whose first the occurring position is 3.
+```
+
+```
+Input: arr[] = [1, 2, 3, 4]
+Output: -1
+Explanation: All elements appear only once so answer is -1.
+```
+
+## Solution
+
+**Language:** Java  
+**Runtime:** N/A  
+**Memory:** N/A  
+**Submitted:** 2026-10-04T15:38:56.623Z  
+
+```java
+class Solution {
+    public int firstRepeated(int[] arr) {
+        
+        
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            int ele = arr[i];
+            map.put(ele,map.getOrDefault(ele,0)+1);
+        }
+        
+        for(int i=0;i<arr.length;i++){
+            
+            int e =arr[i];
+            if(map.get(e) >= 2){
+                
+                return i+1;
+            }
+        }
+        
+        return -1;
+        
+    }
+}
+
+```
+
+---
+
+[View on GeeksforGeeks](https://practice.geeksforgeeks.org/problems/first-repeating-element4018/1)
