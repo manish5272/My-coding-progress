@@ -27,7 +27,7 @@ Explanation: All elements appear only once so answer is -1.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T15:38:56.623Z  
+**Submitted:** 2026-10-04T15:48:13.974Z  
 
 ```java
 class Solution {
