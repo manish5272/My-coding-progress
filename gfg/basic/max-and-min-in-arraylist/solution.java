@@ -1,3 +1,5 @@
+//SUBMISSION 2 WITHOUT USING BUILT IN METHODS , AND NORMAL FOR LOOPS
+
 class Solution {
     public static int maximumElement(ArrayList<Integer> arr) {
         
