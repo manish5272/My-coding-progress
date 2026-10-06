@@ -29,27 +29,36 @@ Explanation: Maximum element is: 8. Minimum element is: 8
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T16:06:57.330Z  
+**Submitted:** 2026-10-06T16:19:55.493Z  
 
 ```java
-import java.util.*;
-
 class Solution {
     public static int maximumElement(ArrayList<Integer> arr) {
         
+        int max=arr.get(0);
+        for(int i=0;i<arr.size();i++){
+            int current = arr.get(i);
+            if(current > max){
+                max = arr.get(i);
+            }
+        }
         
-        
-        int maxValue = Collections.max(arr);
-        
-        return maxValue;
+        return max;
         
     }
 
     public static int minimumElement(ArrayList<Integer> arr) {
         
-        int minValue = Collections.min(arr);
+        int min=arr.get(1);
         
-        return minValue;
+        for(int i=0;i<arr.size();i++){
+            int current = arr.get(i);
+            if(current < min){
+                min = arr.get(i);
+            }
+        }
+        
+        return min;
     }
 }
 
