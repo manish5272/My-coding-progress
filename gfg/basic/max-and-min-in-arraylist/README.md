@@ -29,9 +29,11 @@ Explanation: Maximum element is: 8. Minimum element is: 8
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T16:19:55.493Z  
+**Submitted:** 2026-10-06T16:21:07.558Z  
 
 ```java
+//SUBMISSION 2 WITHOUT USING BUILT IN METHODS , AND NORMAL FOR LOOPS
+
 class Solution {
     public static int maximumElement(ArrayList<Integer> arr) {
         
