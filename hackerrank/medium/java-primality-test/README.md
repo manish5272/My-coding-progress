@@ -29,7 +29,7 @@ If $n$ is a prime number, print ``prime``; otherwise, print ``not prime``.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T18:27:32.085Z  
+**Submitted:** 2026-10-19T18:33:16.042Z  
 
 ```java
 import java.io.*;
@@ -51,50 +51,17 @@ public class Solution {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         String n = bufferedReader.readLine();
-        
-        
 
         bufferedReader.close();
-        int v = Integer.parseInt(n);
         
-        if(isProbablePrime(v)){
+        BigInteger bi = new BigInteger(n);
+        
+        if(bi.isProbablePrime(13)){
             System.out.println("prime");
         }
         else{
             System.out.println("not prime");
         }
-        
-        
-        
-    }
-    
-    public static boolean isProbablePrime(int n){
-        
-        int count=0;
-        boolean isPrime=true;
-        
-        if(n>1){
-            
-            for(int i=1;i<=n;i++){
-                if(n % i == 0){
-                    count++;
-                }
-            }
-            
-            if(count == 2){
-                isPrime=true;
-            }
-            else{
-                isPrime=false;
-            }
-            
-        }
-        else{
-            isPrime=false;
-        }
-        return isPrime;
-        
-        
         
     }
 }
