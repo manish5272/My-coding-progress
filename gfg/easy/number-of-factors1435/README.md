@@ -1,0 +1,57 @@
+# Number of factors
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
+
+## Problem
+
+Find the number of factors for a given integer  **n**.
+
+  **Examples:** 
+
+```
+Input: n = 5
+Output: 2
+Explanation: 5 has 2 factors 1 and 5
+```
+
+```
+Input: n = 25
+Output: 3
+Explanation: 25 has 3 factors 1, 5, 25 
+```
+
+ **Constraints:** 
+1 ≤ n ≤ 105
+
+## Solution
+
+**Language:** Java  
+**Runtime:** N/A  
+**Memory:** N/A  
+**Submitted:** 2026-10-24T15:51:35.340Z  
+
+```java
+class Solution {
+    static int countFactors(int n) {
+        
+        int count=0;
+        
+        if(n<=0){
+            return 0;
+        }
+        
+        for(int i=1;i <= n;i++){
+            if(n%i == 0){
+                count++;
+            }
+        }
+        
+        return count;
+        
+    }
+}
+```
+
+---
+
+[View on GeeksforGeeks](https://practice.geeksforgeeks.org/problems/number-of-factors1435/1)
