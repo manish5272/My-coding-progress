@@ -25,25 +25,17 @@ Explanation: The number of digits in 99999 is 5.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-20T17:37:14.004Z  
+**Submitted:** 2026-11-20T17:43:10.954Z  
 
 ```java
 class Solution {
     public int countDigits(int n) {
-        
-        int count=0;
-        while(n>0){
-            count++;
-            n=n/10;
-        }
-        if(count == 0){
-            return 1;
-        }
+    
+        String s = String.valueOf(n);
+        int count = s.length();
         
         return count;
-        
-    }
-}
+    }}
 ```
 
 ---
