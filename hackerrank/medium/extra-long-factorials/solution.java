@@ -13,24 +13,21 @@ import static java.util.stream.Collectors.toList;
 class Result {
 
     /*
-     * Complete the 'findDigits' function below.
+     * Complete the 'extraLongFactorials' function below.
      *
-     * The function is expected to return an INTEGER.
      * The function accepts INTEGER n as parameter.
      */
 
-    public static int findDigits(int n) {
-    // Write your code here
-        int number = n;
-        int count=0;
-        while(number>0){
-            int last = number % 10;
-            if((last != 0) && (n % last == 0)){
-                count++;
-            }
-            number=number/10;
+    public static void extraLongFactorials(int n) {
+        
+        BigInteger number = BigInteger.valueOf(n);
+        BigInteger ans = BigInteger.ONE;
+        
+        while(!number.equals(BigInteger.ZERO)){
+            ans = ans.multiply(number);
+            number = number.subtract(BigInteger.ONE);
         }
-        return count;
+        System.out.print(ans);
 
     }
 
@@ -39,24 +36,11 @@ class Result {
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        int t = Integer.parseInt(bufferedReader.readLine().trim());
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
 
-        IntStream.range(0, t).forEach(tItr -> {
-            try {
-                int n = Integer.parseInt(bufferedReader.readLine().trim());
-
-                int result = Result.findDigits(n);
-
-                bufferedWriter.write(String.valueOf(result));
-                bufferedWriter.newLine();
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        });
+        Result.extraLongFactorials(n);
 
         bufferedReader.close();
-        bufferedWriter.close();
     }
 }
